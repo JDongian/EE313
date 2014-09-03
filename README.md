@@ -1,4 +1,4 @@
 EE313
 =====
 
-EE313 homework
+Signals and Systems LaTeX homework
