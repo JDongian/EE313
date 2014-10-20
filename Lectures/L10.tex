@@ -1,0 +1,29 @@
+\documentclass{article}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{centernot}
+\usepackage{multicol}
+\usepackage[pdftex]{graphicx}
+\usepackage{listings}
+\setlength{\parindent}{0in}
+
+\begin{document}
+
+\title{EE313\: Lecture 10}
+\author{Joshua Dong}
+\date{\today}
+\maketitle
+
+Fourier
+\\$x(t) = e^{-at}u(t)
+\\h(t) = u(t)$
+\\convolve $x(t) * h(t).
+\\y(t) = \int_{\tau=-\infty}^{\tau=\infty}x(\tau)h(t-\tau)d\tau.
+\\y(t) = 0 \forall t < 0
+\\t > 0 \rightarrow \int_{\tau=-\infty}^{\tau=\infty}e^{-a\tau} \cdot 1 d\tau.
+\\y(t) = \int_{\tau=-\infty}^{\tau=\infty}e^{-a\tau} \cdot 1 d\tau =
+\frac{-1}{a}e^{-at} \left. \right|_{-\infty}^\infty
+\;\; \forall t > 0.
+\\$.
+
+\end{document}

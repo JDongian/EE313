@@ -1,0 +1,54 @@
+\documentclass{article}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{centernot}
+\usepackage{multicol}
+\usepackage[pdftex]{graphicx}
+\usepackage{listings}
+\setlength{\parindent}{0in}
+
+\begin{document}
+
+\title{EE313\: Lecture 7}
+\author{Joshua Dong}
+\date{\today}
+\maketitle
+
+\begin{enumerate}
+    \item{Midterm October 1 (chapter 1, 2)}
+    \item{Homework 3 from 2.1}
+\end{enumerate}
+
+\subsection{Recap}
+Last time proved LTI property: convolution on $h[n-k]$
+\\$h[n-k] \rightarrow$ know if LTI.
+
+\subsection{Convolutions}
+New operator:
+$x[n] * h[n] = \sum\limits_{k = -\infty}^\infty x[k] \cdot h[n-k]$
+\\Note: convolution is commutative.
+\begin{description}
+    \item{Example:} \hfill \\
+        An LTI system has impulse response
+        $h[n] = \delta[n] + \delta[n-1]$.
+        Find the response to the input $x_1[n] = \delta[n]$.
+    \item{Impulse response} \hfill \\
+        output $y[n] = h[n] = \delta[n] + \delta[n+1]$ by definition of
+        impulse response.
+        \\$y[n] = \sum\limits_{k = -\infty}^\infty x[k] \cdot h[n-k] =
+        x[0] \cdot h[n-0]$.
+        (See image, x[n] is zero everywhere but when $n=0$)
+    \\ 
+    \item{Example2:} \hfill \\
+        Find the response to the input $x_2[n] = \delta[n-2]$.
+    \\ 
+    \item{Example3:} \hfill \\
+        An LTI sytem has an impulse response
+        $h[n] = \delta[0]+ \delta[1] + \delta[2]$
+        \\Find output when 
+        $x[n] = 0.5\delta[0]+ 2\delta[1]$.
+    
+\end{description}
+
+
+\end{document}

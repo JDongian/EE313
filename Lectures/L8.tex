@@ -1,0 +1,60 @@
+\documentclass{article}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{centernot}
+\usepackage{multicol}
+\usepackage[pdftex]{graphicx}
+\usepackage{listings}
+\setlength{\parindent}{0in}
+
+\begin{document}
+
+\title{EE313\: Lecture 8}
+\author{Joshua Dong}
+\date{\today}
+\maketitle
+
+Midterm 1 no continuous time convolution
+
+\subsection{Ch2}
+Recall: $x[n] * h[n] = y[n] =
+\sum\limits_{k = -\infty}^\infty x[k] \cdot h[n-k]$
+\begin{description}
+    \item{Continuous Time Convolution}
+        $t \leftarrow n, \tau \leftarrow k, \int \leftarrow \sum
+        \\\int_{\tau = -\infty}^\infty x[\tau] \cdot h[t-\tau]$
+\end{description}
+
+\subsection{LTI}
+LTI system are compelety characterized by their impulse response.
+Thus, you can find the output to any input if you know the impulse response.
+(This is not true if the system is not LTI.)
+
+\begin{description}
+    \item{Example}
+        Consider a discrete time system that has the following proprty:
+        \\$\delta[n] \xrightarrow{S} Bob[n] = 
+        \begin{cases} 
+                0 & n\in\{0,1\} \\
+                0 & otherwise
+        \end{cases}$
+    \item{Is the system LTI?}
+        not enough information. If LTI:
+    \item{1. Find the description equation y[n] = f(x[n])}
+        LTI uniqueness property, start guessing.
+        \\Try: $y[n] = x[n] + x[n+1]$
+        \\Then $y[-5] = 0, y[-1] = 1, y[0] = 1, y[1] = 0$.
+        \\
+        \\Try: $y[n] = x[n] + x[n-1]$
+        \\Then $y[-1] = 0, y[0] = 1, y[1] = 1, y[2] = 0$.
+        \\This is the correct output.
+
+    \item{2. Find the output when $x[n] = \delta[n+1] + \delta[n]$}
+
+    \item{3. Is there another system that has the same output for that input?}
+        No.
+
+\end{description}
+
+
+\end{document}

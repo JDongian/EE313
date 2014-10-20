@@ -1,0 +1,40 @@
+\documentclass{article}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{centernot}
+\usepackage{multicol}
+\usepackage[pdftex]{graphicx}
+\usepackage{listings}
+\setlength{\parindent}{0in}
+
+\begin{document}
+
+\title{EE313\: Lecture 11}
+\author{Joshua Dong}
+\date{\today}
+\maketitle
+
+Fourier, fundamental period of $e^{j\frac{2\pi}{T}t}$ is $T$.
+\\Similarly, fundamental period of $e^{j3 \cdot \frac{2\pi}{T}t}$ is
+$\frac{T}{3}$.
+\\
+\\
+Dirichlet conditions for some $x(t)$
+\begin{description}
+    \item{C1: Absolute integrability}
+    \item{C2: Any finite interval has a finite number of maxima and minima}
+        Examine: $sin(\frac{1}{n})$ and constructions of Cantor dust.
+    \item{C3: }
+\end{description}
+All three conditions satisfied imply that
+$x(t) = \sum{a_k \cdot e^{j\frac{2\pi}{T}t}}$.
+\\How to find the Fourier series coefficients $a_k$?
+\\Note that the Fourier series is the projection of a function onto the
+frequency domain. Thus each $a_k$ represents a projection of $x(t)$ onto
+the ferquency.
+\\
+\\Define the dot product between two continuous time functions as:
+\\$<x_1(t), x_2(t)> = \int_0^\tau f(t) \cdot g^*(t) dt$.
+\\We call this a Hilbert space.
+
+\end{document}
