@@ -1,0 +1,69 @@
+\documentclass{article}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{centernot}
+\usepackage{multicol}
+\usepackage[pdftex]{graphicx}
+\usepackage{listings}
+\setlength{\parindent}{0in}
+
+\begin{document}
+
+\title{EE313\: Lecture 13}
+\author{Joshua Dong}
+\date{\today}
+\maketitle
+
+Recall definition of CTFS:
+\\Synthesis equation:
+\\$x(t) = \sum a_n \cdot e^{jkw_0t}
+\\$
+\\And analysis equation $x(t) \rightarrow a_k$:
+\\$\frac{1}{T}\int_{-T}^{T} x(t) \cdot e^{-jk\cos{t} dt}
+\\$
+Conditional convergence of series can be rearranged to sum to any number
+\\(Reimann's theorem)
+\\
+\\Understand absolute and conditional convergence
+\\
+\\Example:
+\\Square pulse
+\\$
+\begin{cases} 
+    1 & |t| < T_1 \\
+    0 & T_1 < |t| < \frac{T}{2}
+\end{cases}$
+\\Find Fourier coefficients $a_k =
+\frac{1}{T}\int_{-T_1}^{T_1} x(t) \cdot e^{-jk\cos{t} dt}$.
+\\Find (DC coefficient):
+\\$a_0 = \frac{1}{T}\int_{-T_1}^{T_1} (1) \cdot (1) dt =
+\frac{2T_1}{T}$.
+\\Find $a_1$:
+\\...
+\\$a_k = \frac{1}{T}\frac{-1}{jkw_0}
+[e^{-jkw_0T_1} - e^{+jkw_0T_1}]
+\\$Use tricky Euler magic to get:
+\\$= \frac{1}{T}\frac{2}{kw_0} \cdot \sin{(kw_0T_1)}
+\\= \frac{2T_1}{T}$
+\\Note that the resultant transform is $a_k = sinc[k]$ and
+$k \in \mathbb{Z}^+$ such that $k = \frac{T}{2T_1} \rightarrow a_k = 0$.
+\\
+\\Heisenberg Uncertainty Principle
+\\$P(s) =  $probability of particle at position$ s, s \in \mathbb{R}.
+F{P} = $probability of momentum.
+\\
+\\Properties of Fourier
+\begin{description}
+    \item{Linearity}
+        f, g, x+g, af+bg
+        (Why?)
+    \item{Time Shift}
+        $x(t), a_k$
+        $y(t) = x(t-t_0)$ shift by $t_0$ (phase shift)
+        $x(t-t_0) \xrightarrow{phase shift} e^{-jkw_0t_0} \cdot a_k$.
+        (Why? Prove it.)
+\end{description}
+ 
+
+
+\end{document}
