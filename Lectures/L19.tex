@@ -1,0 +1,78 @@
+\documentclass{article}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{centernot}
+\usepackage{multicol}
+\usepackage[pdftex]{graphicx}
+\usepackage{listings}
+\setlength{\parindent}{0in}
+
+\begin{document}
+
+\title{EE313\: Lecture 19}
+\author{Joshua Dong}
+\date{\today}
+\maketitle
+
+\section{Test review}
+\begin{itemize}
+    \item Properties of Fourier transform 
+    \item (see O\&W ex 3.9)
+    \item 'Detective story'
+    \item crib sheet
+    \item DFT (O\&W 3.4)
+\end{itemize}
+
+
+\section{DFT}
+DTFS, period $N$.
+\\definitons:
+\\$x[n] = \sum a_k \cdot e^{j2 \frac{\pi}{N}kn}
+\\k \in \{0,1,..N-1\}
+\\a_N = \frac{1}{N} \sum x[n] \cdot e^{-j \frac{2\pi}{N}kn}
+\\n \in \{0,1,..N-1\}
+\\$Example:
+\\$x[n] = \sin{(\frac{2\pi}{5})} =
+\frac{1}{2j}e^{j(\frac{2\pi}{5})n} -
+\frac{1}{2j}e^{-j(\frac{2\pi}{5})n}
+\\\therefore a_1 = \frac{1}{2j}, a_{-1} = -\frac{1}{2j}
+\\a_{-1} = a_{4},
+\\a_{1} = a_{5}
+$
+\\Plot the graph.
+
+\section{DE's and the transfer function}
+$RC = \frac{dx}{dt} + V_c(t) = V_s(t)
+\\$constant coefficent linear DE$ \rightarrow $LTI and causal.
+\\Assuming initial rest, 
+\\$V_s(t) = e^H \xrightarrow{LTI} Hjwe^{st}.
+$\\Laplace of Impulse
+\\
+\\To find transfer function:
+\\$RC \cdot \frac{dv_c(t)}{dt} + v_c(t) = v_s(t)
+$\\maek transfer function$
+\\...
+\\H(s) = \frac{1}{1 + RCs}
+$\\Also maek freq resp:$
+\\...
+\\H(jw) = \frac{1}{1+RCjw}
+$
+\\Maek plot.
+\\Watch filter. (see O\&W 3.10.2 High pass ex)
+
+\section{Recapitulation}
+\begin{itemize}
+    \item Properties of Systems (memoryless, LTI, etc.)
+    \item Discrete and Continuous convolutions
+    \item DFT, CFT, properties of Fourier transforms,
+        computing basic signals (square pulse, sinusoids)
+    \item Solving DE's to get transfer function and frequency response
+        \\Also be able to plot the magnitude and angle of the freq. response.
+    \item No inverse Fourier trasform. Read examples.
+\end{itemize}
+
+
+
+
+
+\end{document}

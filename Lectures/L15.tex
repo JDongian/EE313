@@ -1,0 +1,48 @@
+\documentclass{article}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{centernot}
+\usepackage{multicol}
+\usepackage[pdftex]{graphicx}
+\usepackage{listings}
+\setlength{\parindent}{0in}
+
+\begin{document}
+
+\title{EE313\: Lecture 17}
+\author{Joshua Dong}
+\date{\today}
+\maketitle
+
+Midterm 2 Nov 5th
+\\
+\\Fourier properties
+\\1. Time shifting
+\\$a_n$ same, phase change.
+\\$x(t) \overset{F}\leftrightarrow a_k
+\\x(t-t_0) \overset{F}\leftrightarrow e^{-jkw_0t_0} \cdot a_k$.
+\\2.
+\\3. Even and odd
+\\$x(t) == x(-t) \overset{F}\leftrightarrow a_k even spectrum$
+\\4. Time scaling, Multiplication in time
+\\$x(t) \leftrightarrow a_k
+\\y(t) \leftrightarrow b_k
+\\x(t) \cdot y(t) \leftrightarrow h_k =
+\sum_{l=-\infty}^{\infty} a_l \cdot b_{k-l}$.
+\\(!) convolution (!)
+\\5. Conjugation ***
+\\$x(t) \leftrightarrow a_k
+\\x^*(t) \leftrightarrow a^*_{-k}
+\\$Proof: from definition of convolution with $e^{-jkw_0t}$.
+\\Conjugate symmetry fro real signals $a^*_-k = a_k$.
+\\
+\\Differentiation ***
+\\$x(t) \leftrightarrow a_k
+\\\frac{dx}{dt} = 
+\\$
+\\Do examples with various square waves.
+\\
+\\$e^{-jk\frac{\pi}{2}} = ?$
+
+
+\end{document}
